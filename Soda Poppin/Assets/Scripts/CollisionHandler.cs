@@ -28,6 +28,7 @@ public class CollisionHandler : MonoBehaviour
     {
         LKeyAction();
         CKeyAction();
+        QuitKeyAction();
     }
 
     void OnCollisionEnter(Collision collision)
@@ -121,6 +122,14 @@ public class CollisionHandler : MonoBehaviour
         {
             collisionEnabled = !collisionEnabled;
             TogglePlayerCollsion(collisionEnabled);
+        }
+    }
+
+    void QuitKeyAction()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
         }
     }
 

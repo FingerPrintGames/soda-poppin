@@ -59,7 +59,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 75
+  field of view: 60
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -130,9 +130,17 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1450320459422583964, guid: 67b1721d16ca0a7409a41b4518288745, type: 3}
+      propertyPath: m_Lens.FieldOfView
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 3723061505311408105, guid: 67b1721d16ca0a7409a41b4518288745, type: 3}
       propertyPath: m_Name
       value: CM vcam1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5994236315062718855, guid: 67b1721d16ca0a7409a41b4518288745, type: 3}
+      propertyPath: m_FollowOffset.z
+      value: -18
       objectReference: {fileID: 0}
     - target: {fileID: 6208876895462468413, guid: 67b1721d16ca0a7409a41b4518288745, type: 3}
       propertyPath: m_RootOrder

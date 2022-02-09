@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4913595136480441055}
   - component: {fileID: 4913595136480441054}
   m_Layer: 0
-  m_Name: MayoLabel
+  m_Name: Jar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6bed45ee88440c245baabc2d8f1f6791, type: 2}
+  - {fileID: 2100000, guid: 5985ad38e783c1d41af96ba9fabb7480, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -90,9 +90,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4913595136622934058}
-  - component: {fileID: 6673038795227745039}
+  - component: {fileID: 4474879076607846676}
   m_Layer: 0
-  m_Name: Mayo
+  m_Name: Pickles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -114,7 +114,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &6673038795227745039
+--- !u!65 &4474879076607846676
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 4913595136995989064}
   - component: {fileID: 4913595136995989071}
   m_Layer: 0
-  m_Name: MayoLid
+  m_Name: Lid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -186,7 +186,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ac16d496283a4e94987a339a654e7eaa, type: 2}
+  - {fileID: 2100000, guid: 6664f2c0cebbdf24ab2b28e93cd170d7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
