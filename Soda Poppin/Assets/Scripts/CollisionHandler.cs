@@ -10,9 +10,12 @@ public class CollisionHandler : MonoBehaviour
     [SerializeField] ParticleSystem crashParticles;
     [SerializeField] ParticleSystem levelCompleteParticles;
 
+    int currentSceneIndex;
+
     Movement movement;
     AudioSource audioSource;
     BoxCollider sodaCanCollider;
+    CoinCounter coinCounter;
 
     bool isAlive = true;
     bool collisionEnabled = true;
@@ -22,6 +25,8 @@ public class CollisionHandler : MonoBehaviour
         movement = GetComponent<Movement>();
         audioSource = GetComponent<AudioSource>();
         sodaCanCollider = GetComponent<BoxCollider>();
+        coinCounter = FindObjectOfType<CoinCounter>();
+        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
     void Update()
@@ -54,9 +59,11 @@ public class CollisionHandler : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Fuel")
+        if (other.tag == "Coin")
         {
-            Debug.Log("Fuel collected");
+            coinCounter.AddACoin();
+            coinCounter.CheckCoinOffOfList(currentSceneIndex);
+            Debug.Log(coinCounter.GetCoinAmount());
             Destroy(other.gameObject);
         }
     }
@@ -90,9 +97,9 @@ public class CollisionHandler : MonoBehaviour
         LoadNextLevel();
     }
 
-    static void LoadNextLevel()
+    void LoadNextLevel()
     {
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        FindObjectOfType<ScenePersist>().ResetScenePersist();
         int totalScenes = SceneManager.sceneCountInBuildSettings;
 
         if (currentSceneIndex + 1 < totalScenes)

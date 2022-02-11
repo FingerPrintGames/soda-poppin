@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Movement : MonoBehaviour
 {
@@ -27,9 +28,9 @@ public class Movement : MonoBehaviour
 
     void ProcessThrust()
     {
-        bool boostInput = Input.GetKey(KeyCode.Space);
-
-        if (boostInput)
+        bool thrustInput = Input.GetKey(KeyCode.Space);
+        
+        if (thrustInput)
         {
             ApplyThrust();
         }
